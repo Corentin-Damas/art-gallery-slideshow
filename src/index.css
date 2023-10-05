@@ -1,39 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --black: #000;
+  --grey-dark: #7d7d7d;
+  --grey-light-1: #e5e5e5;
+  --grey-light-2: #f3f3f3;
+  --white: #fff;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  /* color: var(--main-color) */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
-a:hover {
-  color: #535bf2;
+
+html {
+  font-size: 62.5%;
+  font-family: "Libre Baskerville", serif;
+}
+
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "Libre Baskerville", serif;
+
 }
 
+/* ----- TYPOGRAPHY ----- */
+.display {
+  font-family: inherit;
+  font-size: 20rem;
+  line-height: 15rem;
+  color: var(--grey-light-2);
+  font-weight: 700;
+}
+
+/* heading  */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: inherit;
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+  color: var(--black);
+  font-weight: 700;
+}
+h2 {
+  font-family: inherit;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: var(--black);
+  font-weight: 700;
+}
+h3 {
+  font-family: inherit;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: var(--black);
+  font-weight: 700;
+}
+
+/* Subheading */
+h4 {
+  font-family: inherit;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  color: var(--black);
+  font-weight: 400;
+}
+h5 {
+  font-family: inherit;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  color: var(--grey-dark);
+  font-weight: 700;
+}
+
+/* Links */
+a .start-slideshow {
+  font-family: inherit;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 2.5px;
+  color: var(--black);
+  font-weight: 700;
+}
+a .source {
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  letter-spacing: 2px;
+  color: var(--black);
+  font-weight: 700;
+}
+
+.main-container{
+max-width: 144rem;
+margin-inline: auto;
+
+}
+
+.gallery{
+  margin: 4rem;
+  columns: 4 auto;
+  column-gap: 4rem;
+  overflow: hidden;
+  padding-bottom:2rem ;
+}
+
+.gallery-element {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.gallery-thumbnail{
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-element::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  
+  background-image: linear-gradient(0deg, #000000 , #00000000 60%)
+}
+
+.thumbnail-links{
+  position: absolute;
+  bottom: 3.2rem ;
+  padding-inline: 3.2rem;
+  
+}
+.thumbnail-links h2{ 
+  margin-bottom: 0.7rem;
 }
 
 button {
@@ -55,7 +165,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -66,4 +176,14 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+/* utilities */
+.u-white {
+  color: var(--white);
+}
+
+.u-max-content-width {
+  max-width: 143.9rem;
+
 }
