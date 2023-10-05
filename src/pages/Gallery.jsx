@@ -17,7 +17,6 @@ function Gallery() {
     </main>
   );
 }
-
 export async function loader() {
   const artworks = await getArtWork();
   return artworks;
