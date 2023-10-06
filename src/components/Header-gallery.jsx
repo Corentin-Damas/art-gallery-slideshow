@@ -4,7 +4,7 @@ function Header() {
   const navigate = useNavigate();
   return (
     <header className="header">
-      <h1>galleria.</h1>
+      <h1 className="logo">galleria.</h1>
       <a
         className="start-slideshow u-16px"
         onClick={() => navigate("/slideshow")}

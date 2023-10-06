@@ -45,6 +45,9 @@ body {
   color: var(--grey-light-2);
   font-weight: 700;
 }
+.logo {
+  font-size: 4.8rem;
+}
 
 /* heading  */
 h1 {
@@ -78,8 +81,8 @@ h4 {
   font-weight: 400;
 }
 h5 {
-  font-family: inherit;
-  font-size: 1.3rem;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.4rem;
   line-height: 1.7rem;
   color: var(--grey-dark);
   font-weight: 700;
@@ -168,6 +171,63 @@ a.source {
   margin-bottom: 0.7rem;
 }
 
+/*  ---- Slideshow ---- */
+
+.container-slideshow {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  position: relative;
+  min-height:62.4rem ;
+}
+
+.left,
+.right {
+  position: relative;
+  
+}
+.left{
+  
+}
+.right{
+
+  padding-left: 5rem;
+}
+
+.img-title {
+  position: absolute;
+  background-color: var(--white);
+  width: 40rem;
+  padding-left: 6.4rem;
+  padding-bottom: 6.7rem;
+  top: 0;
+  right: 0%;
+}
+
+.img-hero {
+  width: 100%;
+  z-index: -10;
+  max-width: 45rem;
+}
+
+.img-artist {
+  position: absolute;
+  bottom: 0%;
+  right: 20rem
+}
+.date {
+  top: 0%;
+  right: 0%;
+  position: absolute;
+  z-index: -2;
+}
+.description{
+  max-width: 35rem;
+  padding-top: 12rem;
+  line-height: 2.8rem;
+}
+
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -216,4 +276,8 @@ button:focus-visible {
 
 .u-flex-fullsize {
   flex-basis: 100%;
+}
+
+.u-24-bottom{
+  padding-bottom: 2.4rem;
 }
