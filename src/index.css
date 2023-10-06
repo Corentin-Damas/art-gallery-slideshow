@@ -32,6 +32,9 @@ picture {
 body {
   box-sizing: border-box;
   font-family: "Libre Baskerville", serif;
+  margin-inline: auto;
+  max-width: 143.9rem;
+  padding-top: 3rem;
 }
 
 /* ----- TYPOGRAPHY ----- */
@@ -83,15 +86,20 @@ h5 {
 }
 
 /* Links */
-a .start-slideshow {
+a.start-slideshow {
   font-family: inherit;
   font-size: 1.2rem;
   line-height: 1.5rem;
   letter-spacing: 2.5px;
-  color: var(--black);
+  color: var(--grey-dark);
   font-weight: 700;
+  cursor: pointer;
 }
-a .source {
+a.start-slideshow:hover {
+  color: var(--black);
+}
+
+a.source {
   font-family: inherit;
   font-size: 0.9rem;
   line-height: 1.1rem;
@@ -100,13 +108,25 @@ a .source {
   font-weight: 700;
 }
 
+/*  ---- HEADER ---- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/*  ---- Gallery ---- */
+
 .main-container {
   max-width: 144rem;
   margin-inline: auto;
 }
 
 .gallery {
-  margin: 4rem;
   columns: 4 auto;
   column-gap: 4rem;
   overflow: hidden;
@@ -116,6 +136,7 @@ a .source {
 .gallery-element {
   position: relative;
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 
 .gallery-thumbnail {
@@ -131,7 +152,11 @@ a .source {
   height: 100%;
   width: 100%;
 
-  background-image: linear-gradient(0deg, #000000, #00000000 60%);
+  background-image: linear-gradient(0deg, #000000, #ffffff00 60%);
+}
+
+.gallery-element:hover.gallery-element::before {
+  background-image: linear-gradient(0deg, #000000, #ffffffa1 60%);
 }
 
 .thumbnail-links {
@@ -182,4 +207,13 @@ button:focus-visible {
 
 .u-max-content-width {
   max-width: 143.9rem;
+}
+
+.u-16px {
+  height: 1.6rem;
+  text-transform: uppercase;
+}
+
+.u-flex-fullsize {
+  flex-basis: 100%;
 }
