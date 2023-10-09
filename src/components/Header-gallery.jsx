@@ -7,7 +7,7 @@ function Header() {
       <h1 className="logo">galleria.</h1>
       <a
         className="start-slideshow u-16px"
-        onClick={() => navigate("/slideshow")}
+        onClick={() => navigate("/slideshow/1")}
       >
         start slideshow
       </a>

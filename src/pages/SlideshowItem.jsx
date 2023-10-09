@@ -59,7 +59,7 @@ function SlideshowItem({ art }) {
 
           <div className="img-title">
             <h1 className="u-24-bottom">{name}</h1>
-            <h5>{artist.name}</h5>
+            <h5 className="u-align-right">{artist.name}</h5>
           </div>
           <img className="img-artist" src={`./.${artist.image}`}></img>
         </div>

@@ -1,3 +1,30 @@
+/* screen size break points Slideshow
+  900 px 56.25em
+  660 px 41.25em
+
+  // 900px
+   @media only screen and (max-width: 56.25em) {
+   }
+   660px
+   @media only screen and (max-width: 41.25em) {
+  }
+
+/* screen size break points Gallery
+  950 px 59.375em
+  600 px 37.5em
+
+  // 950px
+   @media only screen and (max-width: 59.375em) {
+   }
+   600px
+   @media only screen and (max-width: 37.5em) {
+   }
+
+59,375
+
+*/
+
+
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 :root {
   --black: #000;
@@ -6,7 +33,6 @@
   --grey-light-2: #f3f3f3;
   --white: #fff;
 
-  /* color: var(--main-color) */
 }
 
 *,
@@ -33,8 +59,10 @@ body {
   box-sizing: border-box;
   font-family: "Libre Baskerville", serif;
   margin-inline: auto;
-  max-width: 143.9rem;
+  max-width: 147.9rem;
   padding-top: 3rem;
+  padding-inline: 2rem;
+  overflow-x: hidden;
 }
 
 /* ----- TYPOGRAPHY ----- */
@@ -134,6 +162,12 @@ a.source {
   column-gap: 4rem;
   overflow: hidden;
   padding-bottom: 2rem;
+  @media only screen and (max-width: 59.375em) {
+    columns: 2 auto;
+  }
+  @media only screen and (max-width: 37.5em) {
+    columns: 1 auto;
+  }
 }
 
 .gallery-element {
@@ -179,6 +213,12 @@ a.source {
   grid-template-columns: 55% 45%;
   min-height: 62.4rem;
   position: relative;
+  
+  @media only screen and (max-width: 56.25em) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 .left,
@@ -186,9 +226,17 @@ a.source {
   position: relative;
 }
 .left {
+  @media only screen and (max-width: 41.25em) {
+
+  }
 }
 .right {
   padding-left: 5rem;
+  @media only screen and (max-width: 56.25em) {
+    padding-left: 0rem;
+    margin-inline: auto;
+  }
+  
 }
 
 .img-title {
@@ -199,7 +247,19 @@ a.source {
   padding-bottom: 6.7rem;
   top: 0;
   right: 0%;
+  z-index: -2;
+
+  @media only screen and (max-width: 41.25em) {
+    height: 10rem;
+  padding-left: 0rem;
+  padding-top: 2rem;
+  top:70%;
+  bottom: 0;
+  left: 4rem;
+  }
 }
+
+
 .btn-focus-view {
   transform: translate(6rem, -200%);
   z-index: 100;
@@ -219,6 +279,17 @@ a.source {
   border: none;
   padding: 1rem 2rem;
   font-weight: 400;
+
+  @media only screen and (max-width: 56.25em) {
+    transform: translate(2rem, -130%);
+  }
+  @media only screen and (max-width: 41.25em) {
+    position: absolute;
+    top: 9rem;
+    left: 4rem;
+  }
+
+  
 }
 
 .btn-focus-view:hover {
@@ -230,23 +301,46 @@ a.source {
   z-index: -10;
   max-width: 45rem;
   position: relative;
+  @media only screen and (max-width: 41.25em) {
+    max-width: 60rem;
+    padding-inline: 4rem;
+    max-height: 50;
+  }
 }
 
 .img-artist {
   position: absolute;
   bottom: 0%;
   right: 20rem;
+  @media only screen and (max-width: 56.25em) {
+    top: 23.6rem;
+    left: 46rem;
+  }
+
+  @media only screen and (max-width: 41.25em) {
+    position: relative;
+    top: 6rem;
+    left: 4rem;
+  }
 }
 .date {
   top: 0%;
   right: 0%;
   position: absolute;
-  z-index: -2;
+  z-index: -1;
+
+  @media only screen and (max-width: 56.25em) {
+  right: -15%;}
+    @media only screen and (max-width: 41.25em) {
+    top: 8rem;
+
+  }
 }
 .description {
   max-width: 35rem;
   padding-top: 12rem;
   line-height: 2.8rem;
+  z-index: 400;
 }
 
 /* --- Pop up --- */
@@ -270,6 +364,13 @@ a.source {
 }
 .pop-up-img{
   height: 100%;
+
+  @media only screen and (max-width: 41.25em) {
+  width: 90%;
+    display: block;
+    object-fit: contain;
+    margin-inline: auto;
+  }
 }
 .close-pop-up{
   align-self: last baseline;
@@ -285,6 +386,9 @@ a.source {
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+  @media only screen and (max-width: 41.25em) {
+    margin-right: 5%;
+  }
 }
 
 /* --- Footer --- */
@@ -351,4 +455,9 @@ button:disabled {
 
 .u-12-bottom {
   padding-bottom: 1.2rem;
+}
+
+.u-align-right{
+  text-align: right;
+  margin-right: 4rem;
 }
