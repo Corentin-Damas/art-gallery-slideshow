@@ -16,7 +16,8 @@ It's a multipage website where every art work is link to an individual page wher
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./result-gallery.jpg)
+![](./result-slideshow.jpg)
 
 
 ### Links
@@ -35,3 +36,7 @@ It's a multipage website where every art work is link to an individual page wher
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - Vite - Set up env
+
+### Actule state of the project 
+Not finished at 100%
+some adjustmenets need to be done on the phone size screen design  
