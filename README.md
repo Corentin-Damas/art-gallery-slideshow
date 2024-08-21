@@ -19,7 +19,6 @@ It's a multipage website where every art work is link to an individual page wher
 ![](./result-gallery.jpg)
 ![](./result-slideshow.jpg)
 
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
@@ -37,6 +36,12 @@ It's a multipage website where every art work is link to an individual page wher
 - [React](https://reactjs.org/) - JS library
 - Vite - Set up env
 
-### Actule state of the project 
+### Actule state of the project
+
 Not finished at 100%
-some adjustmenets need to be done on the phone size screen design  
+some adjustmenets need to be done on the phone size screen design
+
+### Script
+
+$ npm run dev
+$ npm run server
